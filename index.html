@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Sakura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Restaurante Sakura</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reseñas">Reseñas</a></li>
+                <li><a href="#reservas">Reservas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="inicio">
+        <section class="bienvenida">
+            <h2>Bienvenidos a Restaurante Sakura</h2>
+            <p>Descubre los sabores auténticos de Japón en un ambiente único.</p>
+            <img src="Imagen/logo.png" alt="Restaurante Sakura" id="laicona">
+        </section>
+
+        <!-- Menú Section -->
+        <section id="menu">
+            <h2>Nuestro Menú</h2>
+            <div class="productos">
+                <div class="producto">
+                    <img src="Imagen/sushi.png" alt="Sushi" id="comida">
+                    <h3>Sushi</h3>
+                    <p>Variedad de sushi tradicional y moderno.</p>
+                    <p><strong>$1500</strong></p>
+                </div>
+                <div class="producto">
+                    <img src="Imagen/ramen.png" alt="Ramen" id="comida">
+                    <h3>Ramen</h3>
+                    <p>Ramen caliente con los mejores ingredientes.</p>
+                    <p><strong>$1000</strong></p>
+                </div>
+                <div class="producto">
+                    <img src="Imagen/tako.png" alt="Takoyaki" id="comida">
+                    <h3>Takoyaki</h3>
+                    <p>Takoyaki de pulpo o verdura.</p>
+                    <p><strong>$1200</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reseñas Section -->
+        <section id="reseñas">
+            <h2>Reseñas de Clientes</h2>
+            <div class="reseñas-grid">
+                <div class="reseña">
+                    <p>"Excelente comida y servicio. Volveré pronto."</p>
+                    <p><strong>- Juan Pérez</strong></p>
+                </div>
+                <div class="reseña">
+                    <p>"El mejor sushi que he probado en la ciudad."</p>
+                    <p><strong>- María López</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de Reservas -->
+        <section id="reservas">
+            <h2>Haz una Reserva</h2>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="personas">Número de personas:</label>
+                <input type="number" id="personas" name="personas" min="1" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"></textarea>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <p>© 2024 Restaurante Sakura - Contacto: info@sakura.com - Teléfono: +42731526</p>
+    </footer>
+
+</body>
+</html>

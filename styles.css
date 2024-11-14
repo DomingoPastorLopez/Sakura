@@ -1,0 +1,187 @@
+/* Estilos generales */
+body {
+    font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; 
+    background-color: #000000; /* Fondo negro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+header {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #333333; /* Fondo oscuro para contraste */
+    border-bottom: 2px solid #ff0000; /* Borde rojo para un toque sofisticado */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff; /* Texto blanco */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ff0000; /* Rojo al pasar el cursor */
+}
+
+/* Sección de bienvenida */
+.bienvenida {
+    text-align: center;
+    padding: 20px;
+}
+
+.bienvenida img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 2px solid #ff0000; /* Borde rojo para destacar */
+}
+
+/* Menú */
+#menu {
+    padding: 20px;
+    text-align: center;
+    background-color: #111111; /* Fondo más oscuro para secciones */
+    border-top: 2px solid #ff0000;
+    border-bottom: 2px solid #ff0000;
+}
+
+#menu h2 {
+    color: #ff0000; /* Rojo para el título del menú */
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    width: 200px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #222222; /* Fondo oscuro para las tarjetas */
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #ff0000; /* Borde rojo */
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Reseñas */
+.reseñas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #111111;
+}
+
+.reseña {
+    width: 200px;
+    padding: 15px;
+    background-color: #222222;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Formulario de reservas */
+#reservas form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+#reservas form input,
+#reservas form textarea,
+#reservas form button {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#reservas form button {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#reservas form button:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Ajustes de imagen y centrado */
+main {
+    width: 90%;
+    max-width: 1200px;
+}
+
+.bienvenida img, .producto img {
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
