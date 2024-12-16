@@ -1,187 +1,306 @@
-/* Estilos generales */
+/* General */
 body {
-    font-family: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', 'Noto Sans JP', sans-serif;
     margin: 0;
     padding: 0;
-    color: #ffffff; 
-    background-color: #000000; /* Fondo negro */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #111;
+    color: #fff;
 }
 
-/* Encabezado */
+/* Header */
 header {
-    width: 100%;
-    padding: 10px 20px;
-    background-color: #333333; /* Fondo oscuro para contraste */
-    border-bottom: 2px solid #ff0000; /* Borde rojo para un toque sofisticado */
+    background-color: #333;
+    padding: 15px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 header .logo h1 {
-    margin: 0;
-    font-size: 24px;
-    color: #ffffff; /* Texto blanco */
+    color: #ff4d4d;
+    font-size: 2.5rem;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 15px;
+    gap: 20px;
+    margin: 0;
 }
 
-header nav ul li a {
+nav a {
     text-decoration: none;
-    color: #ffffff; /* Texto blanco */
+    color: white;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 1.1rem;
 }
 
-header nav ul li a:hover {
-    color: #ff0000; /* Rojo al pasar el cursor */
+nav a:hover {
+    color: #ff4d4d;
+    text-decoration: underline;
 }
 
-/* Sección de bienvenida */
+/* Bienvenida */
 .bienvenida {
     text-align: center;
-    padding: 20px;
+    margin: 50px auto;
 }
 
 .bienvenida img {
-    width: 80%;
-    max-width: 400px;
-    border-radius: 8px;
+    max-width: 200px;
     margin-top: 20px;
-    border: 2px solid #ff0000; /* Borde rojo para destacar */
 }
 
 /* Menú */
-#menu {
-    padding: 20px;
-    text-align: center;
-    background-color: #111111; /* Fondo más oscuro para secciones */
-    border-top: 2px solid #ff0000;
-    border-bottom: 2px solid #ff0000;
-}
-
-#menu h2 {
-    color: #ff0000; /* Rojo para el título del menú */
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
 .productos {
     display: flex;
+    gap: 30px;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
 .producto {
-    width: 200px;
+    background-color: #222;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    width: 300px;
     text-align: center;
-    border-radius: 8px;
-    background-color: #222222; /* Fondo oscuro para las tarjetas */
-    color: #ffffff; /* Texto blanco */
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 2px solid #ff0000; /* Borde rojo */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
 }
 
 .producto img {
     width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Reseñas */
-.reseñas-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #111111;
+.producto h3 {
+    font-size: 1.5rem;
+    color: #ff4d4d;
 }
 
-.reseña {
-    width: 200px;
-    padding: 15px;
-    background-color: #222222;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
-    text-align: center;
-    color: #ffffff;
-}
-
-/* Formulario de reservas */
-#reservas form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 300px;
-    margin: 0 auto;
-}
-
-#reservas form input,
-#reservas form textarea,
-#reservas form button {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-}
-
-#reservas form button {
-    background-color: #ff0000;
-    color: #ffffff;
-    font-weight: bold;
+.toggle-descripcion {
+    background-color: #ff4d4d;
+    color: white;
     border: none;
+    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+    font-size: 1rem;
 }
 
-#reservas form button:hover {
-    background-color: #cc0000;
-    transform: scale(1.05);
+.descripcion-adicional {
+    display: none;
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
 footer {
-    width: 100%;
+    background-color: #222;
     text-align: center;
-    padding: 10px;
-    background-color: #111111;
-    color: #ffffff;
+    padding: 20px;
+    color: #aaa;
 }
-
-/* Ajustes de imagen y centrado */
-main {
+/* Reservas */
+.reservas-container {
+    background-color: #222;
+    padding: 40px 20px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     width: 90%;
-    max-width: 1200px;
+    max-width: 800px;
+    color: #fff;
+    text-align: center;
 }
 
-.bienvenida img, .producto img {
-    border-radius: 8px;
+.reservas-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4d4d;
 }
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 45%; 
+}
+
+.form-group.mensaje {
+    width: 100%; 
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+.btn-reservar {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.btn-reservar:hover {
+    background-color: darkred;
+    transform: translateY(-3px);
+}
+
 
 @media (max-width: 768px) {
-    .productos {
-        flex-direction: column;
-        align-items: center;
+    .form-group {
+        width: 100%;
     }
-    header nav ul {
-        flex-direction: column;
-        gap: 5px;
-    }
+}
+
+.mapa-container {
+    background-color: #222;
+    padding: 40px 20px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 1000px;
+    color: #fff;
+    text-align: center;
+}
+
+.mapa-container h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+}
+
+.mapa {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo img:hover {
+    animation: giroRapido 1s infinite linear;
+    transform: scale(1.1); 
+}
+
+
+.reservas-container {
+    background-color: #222;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.reservas-container h2 {
+    color: #ff4d4d;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff4d4d;
+    outline: none;
+}
+
+
+input:invalid, textarea:invalid {
+    border-color: red;
+}
+
+input:valid, textarea:valid {
+    border-color: green;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.btn-reservar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+    background-color: darkred;
 }
